@@ -33,6 +33,7 @@ make clean && make
 ```
 
 - 4.compliation:
+flann在>=1.8.5版本会遇到undefined reference to LZ4库，需要在cmake之后在build/CMakeFiles/nonrigid_icp.dir/link.txt中手动加入liblz4.so的路径，具体路径在哪需要进入/usr/lib用find命令搜索，我遇到过的情况是/usr/lib/x86_64-linux-gnu/liblz4.so。
 ```
 mkdir build
 cd build
