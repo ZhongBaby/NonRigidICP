@@ -16,7 +16,7 @@ The code are based on the following third parties.
 ## Install Steps:
 - 1.run blow command
 ```
-sudo apt-get install libopencv-dev liblz4-dev libpcl-dev libdlib-dev libsuitesparse-dev libomp-dev cmake python python-pip libxi-dev
+sudo apt-get install libopencv-dev liblz4-dev libpcl-dev libdlib-dev libsuitesparse-dev libomp-dev cmake python python-pip libxi-dev libgl1-mesa-dev freeglut3-dev
 ```
 
 - 2.`sudo vim /usr/include/dlib/gui_core/gui_core_kernel_2.h`  and comment line 11 and 12.<br>
@@ -26,6 +26,7 @@ sudo apt-get install libopencv-dev liblz4-dev libpcl-dev libdlib-dev libsuitespa
 ```
 
 - 3.recomplie trimesh
+如果遇到cannot find -lGL编译错误，将/usr/lib/libGL.so.1复制出一份/usr/lib/libGL.so
 ```
 cd 3rdparty/trimesh2/
 make clean && make
